@@ -1,0 +1,381 @@
+
+{% load staticfiles %}
+
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>SookmyungGo</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link  href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="stylesheet"  href="{% static 'css/font-awesome.min.css' %}">
+        <!--<link  href="{% static 'css/overwrite.css' %}" rel="stylesheet">
+        <link  href="{% static 'css/style.css' %}" rel="stylesheet">-->
+        <!-- Bootstrap Core CSS -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+        <!-- Plugin CSS -->
+        <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}">
+        <link rel="stylesheet" href="{% static 'vendor/device-mockups/device-mockups.min.css' %}">
+
+        <!-- Theme CSS -->
+        <link href="{% static 'css/new-age.min.css' %}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+        <!-- =======================================================
+            Theme Name: Personal
+            Theme URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+            Author: BootstrapMade
+            Author URL: https://bootstrapmade.com
+        ======================================================= -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <script type="text/javascript">
+             function showhide(obj) {  // 플래시 또는 html에서 오브젝트id값에 의한 호출
+             var seogd = document.getElementById(obj);  // 호출된 id값을 seogd 변수로 치환
+                if ( seogd.style.display != 'none' ) { // 만약 seogd가 none이 아니면 즉, 보여지는 상태이면
+                    seogd.style.display = 'none';   // seogd를 숨기고
+                } else {
+               seogd.style.display = ''; // seogd이 숨김 상태이면 나타내라
+              }
+        }
+        </script>
+    </head>
+    <body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <!--<a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>-->
+                <!--<a class="navbar-brand page-scroll" href="#sookmyungGo">SookmyungGo</a>-->
+                <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a class="page-scroll" href="{% url 'post_list' %}">SookmyungGo</a>
+                </li>
+                </ul>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#download">Upload</a>
+                    </li>
+                    <!--<li>-->
+                        <!--<a class="page-scroll" href="#features">Features</a>-->
+                    <!--</li>-->
+                    <li>
+                        <a class="page-scroll" href="#cta">Photos</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="container" id="sookmyungGo" class="sookmyungGo bg-primary">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="header-content">
+                        <div class="header-content-inner">
+                            <img src="{% static 'media/Girlclash/GC2.png' %}" style=width:700px >
+
+                            <p>Automatic photo classifier</p>
+                             {% csrf_token %}
+                              <!--<input name="hiya">-->
+                              <!--<input type="submit">-->
+                            </form>
+                            <a href="#download" class="btn btn-outline btn-xl page-scroll">Start Now for Free!</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <section id="download" class="download bg-primary text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="section-heading">Upload your photos!</h2>
+                    <p>Press the button to go to the upload page.</p>
+                    <div class="badges">
+                        <a href="{% url 'upload-angular' %}"class="btn btn-outline btn-xl page-scroll">Upload photos</a>
+                        <!--<a class="badge-link" href="#"><img src="{% static 'img/google-play-badge.svg' %}" alt=""></a>-->
+                        <!--<a class="badge-link" href="#"><img src="{% static 'img/app-store-badge.svg' %}" alt=""></a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta"  style=" padding: 0px; height: 220px;">
+        <div class="cta-content" >
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="section-heading">
+                            <h2>Photos</h2>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding:10px;">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a class="btn btn-outline btn-xl page-scroll"    href="javascript:showhide('all');" alt=""  >
+                            All
+                            </a><div style="DISPLAY: none">
+
+                            </div></li>
+
+                        <li class="active">
+                            <a class="btn btn-outline btn-xl page-scroll"    href="javascript:showhide('face');" alt=""  >
+                            Faces
+                            </a><div style="DISPLAY: none">
+                               </div></li>
+                        <li class="active">
+                            <a class="btn btn-outline btn-xl page-scroll"   href="javascript:showhide('food');" alt=""  >
+                            Food
+                            </a><div style="DISPLAY: none">
+                             </div></li>
+                        <li class="active">
+                            <a class="btn btn-outline btn-xl page-scroll"    href="javascript:showhide('nature');" alt=""  >
+                            Nature
+                            </a><div style="DISPLAY: none">
+                            </div></li>
+                        <li class="active">
+                            <a class="btn btn-outline btn-xl page-scroll"    href="javascript:showhide('pet');" alt=""  >
+                            Pet
+                            </a><div style="DISPLAY: none">
+
+                            </div></li>
+                        <li class="active">
+                            <a class="btn btn-outline btn-xl page-scroll"    href="javascript:showhide('fashion');" alt=""  >
+                            Fashion
+                            </a><div style="DISPLAY: none">
+                            </div></li>
+                        <li class="active">
+                            <a class="btn btn-outline btn-xl page-scroll"    href="javascript:showhide('etc');void(0);" alt=""  >
+                            Etc
+                            </a><div style="DISPLAY: none">
+                            </div></li>
+                    </ul>
+                    <body>
+                                <div class="jumbotron" >
+                                    <div class="row"id="all" style="display:none">
+                                          <div class="container">
+                                            <div class="row">
+                                                {% for picture in pictures %}
+                                                    <div class="col-md-3 col-sm-3 portfolio-item">
+                                                        <a href="" data-toggle="modal">
+                                                            <div class="portfolio-hover">
+                                                                <div class="portfolio-hover-content">
+                                                                    <br>
+                                                                </div>
+                                                            </div>
+                                                            <img src="{{picture.file.url}}" class="img-responsive" alt="" class="img-thumbnail" style="width:360px; height:360px;">
+                                                        </a>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+
+                                          </div>
+
+                                    </div>
+                                    <div class="row" id="face" style="display:none">
+                                          <div class="container">
+                                            <div class="row">
+                                                {% for face in faces %}
+                                                    <div class="col-md-3 col-sm-3 portfolio-item">
+                                                        <a href="" data-toggle="modal">
+                                                            <div class="portfolio-hover">
+                                                                <div class="portfolio-hover-content">
+                                                                    <br>
+                                                                </div>
+                                                            </div>
+                                                            <img src="{{face.file.url}}" class="img-responsive" alt="" class="img-thumbnail" style="width:360px; height:360px;">
+                                                        </a>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+
+                                          </div>
+
+                                    </div>
+                                    <div class="row"id="food" style="display:none">
+                                          <div class="container">
+                                            <div class="row">
+                                                {% for food in foods %}
+                                                    <div class="col-md-3 col-sm-3 portfolio-item">
+                                                        <a href="" data-toggle="modal">
+                                                            <div class="portfolio-hover">
+                                                                <div class="portfolio-hover-content">
+                                                                    <br>
+                                                                </div>
+                                                            </div>
+                                                            <img src="{{food.file.url}}" class="img-responsive" alt="" class="img-thumbnail" style="width:360px; height:360px;">
+                                                        </a>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+
+                                          </div>
+
+                                    </div>
+
+                                    <div class="row"  id="nature" style="display:none">
+                                          <div class="container">
+                                            <div class="row">
+                                                {% for nature in natures %}
+                                                    <div class="col-md-3 col-sm-3 portfolio-item">
+                                                        <a href="" data-toggle="modal">
+                                                            <div class="portfolio-hover">
+                                                                <div class="portfolio-hover-content">
+                                                                    <br>
+                                                                </div>
+                                                            </div>
+                                                            <img src="{{nature.file.url}}" class="img-responsive" alt="" class="img-thumbnail" style="width:360px; height:360px;">
+                                                        </a>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+
+                                          </div>
+
+                                    </div>
+                                    <div class="row"   id="pet" style="display:none">
+                                          <div class="container">
+                                            <div class="row">
+                                                {% for pet in pets %}
+                                                    <div class="col-md-3 col-sm-3 portfolio-item">
+                                                        <a href="" data-toggle="modal">
+                                                            <div class="portfolio-hover">
+                                                                <div class="portfolio-hover-content">
+                                                                    <br>
+                                                                </div>
+                                                            </div>
+                                                            <img src="{{pet.file.url}}" class="img-responsive" alt="" class="img-thumbnail" style="width:360px; height:360px;">
+                                                        </a>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+
+                                          </div>
+
+                                    </div>
+                                    <div class="row" id="fashion" style="display:none">
+                                          <div class="container">
+                                            <div class="row">
+                                                {% for fashion in fashions %}
+                                                    <div class="col-md-3 col-sm-3 portfolio-item">
+                                                        <a href="" data-toggle="modal">
+                                                            <div class="portfolio-hover">
+                                                                <div class="portfolio-hover-content">
+                                                                    <br>
+                                                                </div>
+                                                            </div>
+                                                            <img src="{{fashion.file.url}}" class="img-responsive" alt="" class="img-thumbnail" style="width:360px; height:360px;">
+                                                        </a>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+
+                                          </div>
+
+                                    </div>
+
+                                    <div class="row"id="etc" style="display:none">
+                                          <div class="container">
+                                            <div class="row">
+                                                {% for etc in etcs %}
+                                                    <div class="col-md-3 col-sm-3 portfolio-item">
+                                                        <a href="" data-toggle="modal">
+                                                            <div class="portfolio-hover">
+                                                                <div class="portfolio-hover-content">
+                                                                    <br>
+                                                                </div>
+                                                            </div>
+                                                            <img src="{{etc.file.url}}" class="img-responsive" alt="" class="img-thumbnail" style="width:360px; height:360px;">
+                                                        </a>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+
+                                          </div>
+
+                                    </div>
+
+
+                                </div>
+                            </body>
+
+
+        </div>
+    </section>
+        </div>
+    </section>
+<section id = "contact">
+    <div class = "container">
+
+    </div>
+</section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2016 Start Bootstrap. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{% static 'js/new-age.min.js' %}"></script>
+
+</body>
+</html>

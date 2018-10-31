@@ -1,0 +1,6 @@
+model_checkpoint_path: "/home/sm/PycharmProjects/smproject/smgo/train_alexnet_5_label/model.ckpt-100000"
+all_model_checkpoint_paths: "/home/sm/PycharmProjects/smproject/smgo/train_alexnet_5_label/model.ckpt-89479"
+all_model_checkpoint_paths: "/home/sm/PycharmProjects/smproject/smgo/train_alexnet_5_label/model.ckpt-92336"
+all_model_checkpoint_paths: "/home/sm/PycharmProjects/smproject/smgo/train_alexnet_5_label/model.ckpt-95079"
+all_model_checkpoint_paths: "/home/sm/PycharmProjects/smproject/smgo/train_alexnet_5_label/model.ckpt-97962"
+all_model_checkpoint_paths: "/home/sm/PycharmProjects/smproject/smgo/train_alexnet_5_label/model.ckpt-100000"
